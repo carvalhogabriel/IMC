@@ -43,7 +43,7 @@
                                 <rect key="frame" x="62.5" y="167" width="110" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura (m)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8q-iW-1zU">
                                 <rect key="frame" x="202.5" y="141" width="110" height="18"/>
@@ -55,7 +55,7 @@
                                 <rect key="frame" x="202.5" y="167" width="110" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foa-fj-Nsh">
                                 <rect key="frame" x="62.5" y="211" width="250" height="44"/>
@@ -67,11 +67,16 @@
                                 <state key="normal" title="Calcular">
                                     <color key="titleColor" red="0.31764705882352939" green="0.58823529411764708" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onCalculateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJC-I8-YTg"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-cV-WHG">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-cV-WHG">
                                 <rect key="frame" x="0.0" y="275" width="375" height="392"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu índice de massa corporal é" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HQ-ZR-1uw">
@@ -136,6 +141,7 @@
                         <outlet property="heightTextField" destination="lje-lk-rzE" id="9Hc-dI-2Dc"/>
                         <outlet property="resultImageView" destination="dzO-hH-MhA" id="1yt-ax-fjK"/>
                         <outlet property="resultLabel" destination="QXG-9m-vQw" id="aDq-Mx-xZm"/>
+                        <outlet property="viewResult" destination="KnQ-cV-WHG" id="CEj-Qa-mUF"/>
                         <outlet property="weightTextField" destination="itz-RS-iau" id="usJ-2k-sKA"/>
                     </connections>
                 </viewController>
